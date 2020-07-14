@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { TranslationComponent } from './translation/translation.component';
+import { ServiciosComponent } from './servicios/servicios.component';
 
 
 const routes: Routes = [
-  {
-    path: '**', component: TranslationComponent
-  }
+  {path: 'servicio', component: ServiciosComponent},
+  {path: '**', component: TranslationComponent}
 ];
 
 @NgModule({
