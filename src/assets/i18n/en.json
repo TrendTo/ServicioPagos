@@ -1,3 +1,6 @@
 {
-    "principal.texto" : "List of fruits"
+    "principal" : {
+        "texto": "List of fruits",
+        "ingresar" : "login"
+    }
 }

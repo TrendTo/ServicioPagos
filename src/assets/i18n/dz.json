@@ -1,3 +1,6 @@
 {
-    "principal.texto": "Obst-Liste"
+    "principal" : {
+        "texto" : "Obst-Liste",
+        "ingresar" : "eingeben"
+    }
 }

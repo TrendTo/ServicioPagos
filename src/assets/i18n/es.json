@@ -1,3 +1,6 @@
 {
-    "principal.texto" : "Lista de frutas"
+    "principal" : {
+        "texto" : "Lista de frutas",
+        "ingresar" : "ingresar"
+    }
 }
