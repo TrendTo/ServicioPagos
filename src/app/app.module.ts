@@ -7,10 +7,12 @@ import { HttpClient, HttpClientModule } from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { TranslationComponent } from './translation/translation.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TranslationComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +24,7 @@ import { AppComponent } from './app.component';
         useFactory: (http: HttpClient) => {
           return new TranslateHttpLoader(http)
         },
-        deps:[ HttpClientModule ]
+        deps:[ HttpClient ]
       },
     })
   ],
