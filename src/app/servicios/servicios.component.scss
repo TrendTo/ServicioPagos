@@ -103,12 +103,14 @@ h3 {
   }
   
   .tab__inside-text {
+	padding: 3em;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-content: center;
     
     p {
+	  padding: 10px;
       color: #545454;
       font-size: 14px;
       font-weight: 100;
@@ -146,101 +148,10 @@ h3 {
 // comentario
 
 .subContainer {
-	.cardNum {
-		&:after {
-			position: absolute;
-			top: -25px;
-			font-family: "Roboto", sans-serif;
-			left: 0;
-			color: rgba(142, 190, 255, 0.9);
-			font-size: 13px;
-			content: "Credit  Card  Number";
-		}
-		margin-left: 35px;
-		margin-top: -25px;
-		position: relative;
-		grid-area: cardNum;
-		background: #3799ff;
-		align-self: center;
-		padding: 7px 5px;
-		font-size: 19px;
-		ul {
-			list-style-type: none;
-			text-align: center;
-			li {
-				display: inline-block;
-				font-family: "Montserrat", sans-serif;
-				margin: 0 auto;
-				letter-spacing: 1px;
-				&:last-child {
-					text-align: right;
-				}
-			}
-		}
-	}
-	.date {
-		&:after {
-			position: absolute;
-			top: -25px;
-			font-family: "Roboto", sans-serif;
-			left: 0;
-			color: rgba(142, 190, 255, 0.9);
-			font-size: 13px;
-			content: "Expiration";
-		}
-		p {
-			padding: 0;
-			margin: 0;
-			font-size: 15px;
-			font-family: "Montserrat", sans-serif;
-			font-weight: lighter;
-			text-align: center;
-			padding: 4px 20px;
-			padding-right: 25px;
-		}
-		margin-left: 35px;
-		margin-top: -25px;
-		position: relative;
-		grid-area: date;
-		background: #3799ff;
-		align-self: center;
-		justify-self: left;
-	}
-	.ccv {
-		&:after {
-			position: absolute;
-			top: -25px;
-			font-family: "Roboto", sans-serif;
-			left: 0;
-			color: rgba(142, 190, 255, 0.9);
-			font-size: 13px;
-			content: "CCV";
-		}
-		p {
-			padding: 0;
-			margin: 0;
-			font-size: 15px;
-			font-family: "Montserrat", sans-serif;
-			font-weight: lighter;
-			text-align: center;
-			padding: 4px 20px;
-			padding-right: 25px;
-			padding: 4px 12px;
-			letter-spacing: 1px;
-		}
-		margin-left: 35px;
-		margin-top: -25px;
-		position: relative;
-		grid-area: ccv;
-		align-self: center;
-		justify-self: left;
-		background: #3799ff;
-		margin-left: 0;
-	}
 	position: absolute;
 	top: 50%;
-	-webkit-transform: translateY(-50%);
-	transform: translateY(-50%);
+	-webkit-transform: translate(0px,-50%);
+	transform: translate(365px,-55%);
 	height: 270px;
 	width: 400px;
 	border-radius: 9px;
@@ -249,36 +160,70 @@ h3 {
 	color: #fff;
 	min-height: 0;
 	min-width: 0;
-	background: #1f8fff;
-	box-shadow: -10px 10px 60px 10px #ADB7C4;
-	grid-area: card;
-	display: grid;
-	grid-template-columns: repeat(7, 1fr);
-	grid-template-rows: repeat(3, 1fr);
-	grid-template-areas: "name name  . . . visa visa ""cardNum cardNum cardNum cardNum cardNum . ." " date date date date . ccv ccv ";
-	p {
-		margin-left: 35px;
-		margin-top: -25px;
-		padding-top: 25px;
-		font-weight: 600;
-		grid-area: name;
-		margin-top: 0px;
+	box-shadow: -10px 10px 40px 1px #000;
+	.delantera {
+		width: 100%;
+		border-radius: 9px;
+		padding: 20px;
+		background: url('/assets/img/bg-tarjeta/bg-tarjeta-02.jpg');
+		background-size: cover;
 	}
-	.visaCont {
-		margin-left: 35px;
-		margin-top: -25px;
-		display: grid;
-		grid-area: visa;
-		overflow: hidden;
-		margin: 0;
-		justify-self: center;
-		align-self: center;
-		svg {
-			height: 50px;
+}
+.delantera {
+	.logo-marca {
+		text-align: right;
+		min-height: 50px;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			max-width: 80px;
+		}
+	}
+	.chip {
+		width: 100%;
+		max-width: 50px;
+		margin-bottom: 20px;
+	}
+	.grupo {
+		.label {
+			font-size: 16px;
+			color: #7d8994;
+			margin-bottom: 5px;
+		}
+		.numero {
+			background: none;
+			color: #fff;
+			font-size: 22px;
+			text-transform: uppercase;
+		}
+		.nombre {
+			color: #fff;
+			font-size: 22px;
+			text-transform: uppercase;
+		}
+		.ccv {
+			background: none;
+			color: #fff;
+			font-size: 22px;
+			text-transform: uppercase;
+			max-width: 100px;
+		}
+		.expiracion {
+			color: #fff;
+			font-size: 22px;
+			text-transform: uppercase;
 			width: 100px;
 		}
 	}
+	.flexbox {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 20px;
+	}
 }
+
+
 * {
 	font-family: "Roboto", sans-serif;
 	box-sizing: border-box;
@@ -286,18 +231,18 @@ h3 {
 	margin: 0;
 }
 body {
-	overflow: hidden;
+	overflow: visible;
 }
 .container {
 	position: absolute;
 	width: 600px;
 	height: 400px;
 	background: #FFF;
-	box-shadow: 0px 0px 40px 1px #eee;
+	box-shadow: 0px 0px 40px 1px #000;
 	top: 50%;
 	left: 50%;
-	-webkit-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
+	-webkit-transform: translate(0%, 0%);
+	transform: translate(30%, 0%);
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	-webkit-box-pack: justify;
@@ -311,12 +256,12 @@ body {
 .mGrid {
 	grid-area: mGrid;
 	display: grid;
-	grid-template-rows: repeat(3, 1fr);
+	grid-template-rows: repeat(4, 1fr);
 	overflow: hidden;
 	-webkit-box-pack: center;
 	justify-content: center;
-	margin-top: 15px;
-	margin-left: -10px;
+	margin-top: 0px;
+	margin-left: 30px;
 }
 .total {
 	padding-top: 50px;
@@ -379,8 +324,8 @@ button.new {
 	align-self: center;
 	font-family: "Open Sans", sans-serif;
 	background: #ffffff;
-	color: #0b82f8;
-	border: 1px solid #0b82f8;
+	color: #00c100;
+	border: 1px solid #00c100;
 	text-transform: uppercase;
 	font-size: 0.97rem;
 	opacity: 0.8;
@@ -394,7 +339,32 @@ button.new {
 	&:hover {
 		-webkit-transition: all 0.2s linear;
 		transition: all 0.2s linear;
-		background: #0b82f8;
+		background: #00c100;
+		color: #FFF;
+	}
+}
+button.cancel {
+	display: block;
+	justify-self: center;
+	align-self: center;
+	font-family: "Open Sans", sans-serif;
+	color: #fb0000;
+	background: #ffffff;
+	border: 1px solid #fb0000;
+	text-transform: uppercase;
+	font-size: 0.97rem;
+	opacity: 0.8;
+	font-weight: lighter;
+	padding: 7px 40px;
+	border-radius: 1.6rem;
+	cursor: pointer;
+	outline: none;
+	-webkit-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+	&:hover {
+		-webkit-transition: all 0.2s linear;
+		transition: all 0.2s linear;
+		background: #fb0000;
 		color: #FFF;
 	}
 }

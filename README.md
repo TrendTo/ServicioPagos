@@ -30,3 +30,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 #Refencias Implementadas
 [Ngx Translate](https://medium.com/angular-chile/aplicaciones-multilenguaje-en-angular-7-con-ngx-translate-db8d1e7b380c)
 [Tabs de Servicio](https://codepen.io/mirandalwashburn/pen/ewzRJN)
+[Modal de Pagos](https://codepen.io/orzoon/pen/NBxRNP?editors=1100)
+[Diseño Tarjeta de Credito](https://github.com/falconmasters/formulario-tarjeta-credito-3d)
