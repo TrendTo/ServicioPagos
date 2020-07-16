@@ -32,3 +32,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 [Tabs de Servicio](https://codepen.io/mirandalwashburn/pen/ewzRJN)
 [Modal de Pagos](https://codepen.io/orzoon/pen/NBxRNP?editors=1100)
 [Diseño Tarjeta de Credito](https://github.com/falconmasters/formulario-tarjeta-credito-3d)
+[Configuracion de Firebase Hosting](https://www.positronx.io/deploy-angular-app-to-production-with-firebase-hosting/)
+[Integracion de Chat Messenger 1](https://medium.com/@fransandi/integrate-facebook-messenger-livechat-plugin-in-your-angular-application-a55bb355795a)
+[Integracion de Chat Messenger 2](https://medium.com/@dimshik100/thanks-for-the-detailed-article-83ef3bed7e42)

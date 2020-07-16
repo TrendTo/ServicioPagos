@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http'
+import { FacebookModule } from 'ngx-facebook'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -30,7 +31,8 @@ import { FormsModule } from '@angular/forms'
         },
         deps:[ HttpClient ]
       },
-    })
+    }),
+    FacebookModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
