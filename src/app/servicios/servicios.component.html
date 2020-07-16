@@ -2,10 +2,10 @@
     <h1>{{ "servicios" | uppercase }}</h1>
     <div [ngSwitch]="tab">
       <div class="tab__title">
-        <button class="tab__button" [ngClass]="{'tab_button-active': tab=='one'}" (click)="cambiarTab('one')"><img src="{{imgs[0]}}">Empresa Electrica Quito</button>
-        <button class="tab__button" [ngClass]="{'tab_button-active': tab=='two'}" (click)="cambiarTab('two')"><img src="{{imgs[1]}}">Agencia Nacional de Transito</button>
-        <button class="tab__button" [ngClass]="{'tab_button-active': tab=='three'}" (click)="cambiarTab('three')"><img src="{{imgs[2]}}">Servicio de Rentas Internas</button>
-        <button class="tab__button" [ngClass]="{'tab_button-active': tab=='four'}" (click)="cambiarTab('four')"><img src="{{imgs[3]}}">Movistar</button>
+        <button class="tab__button" [ngClass]="{'tab_button-active': tab=='one'}" (click)="cambiarTab('one')"><img src="{{imgs[0]}}">{{ servicios[0] }}</button>
+        <button class="tab__button" [ngClass]="{'tab_button-active': tab=='two'}" (click)="cambiarTab('two')"><img src="{{imgs[1]}}">{{ servicios[1] }}</button>
+        <button class="tab__button" [ngClass]="{'tab_button-active': tab=='three'}" (click)="cambiarTab('three')"><img src="{{imgs[2]}}">{{ servicios[2] }}</button>
+        <button class="tab__button" [ngClass]="{'tab_button-active': tab=='four'}" (click)="cambiarTab('four')"><img src="{{imgs[3]}}">{{ servicios[3] }}</button>
   
       </div>
     <div *ngSwitchCase="'one'">
@@ -15,9 +15,18 @@
             <img src="{{imgs[0]}}">
           </div>
           <div class="tab__inside-text">
-          <h3>Tab One</h3>
-          <p>Ne aliquam vulputate sadipscing mea. Ea possim explicari vel. Vim ad falli tincidunt neglegentur, et quas noster nec. Iusto legere omnesque mea an, per vidit equidem ea. Elitr iuvaret erroribus ex vis.</p>
-          <button data-toggle="modal" data-target="#modalLRForm">Consultar</button>
+          <h3>{{ servicios[0] }}</h3>
+          <form>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Cedula</label>
+              <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Numero de Planilla</label>
+              <input type="number" class="form-control" id="exampleInputPassword1">
+            </div>
+            <button data-toggle="modal" data-target="#modalLRForm">Consultar</button>
+          </form>
           </div>
           
         </div>
@@ -30,9 +39,18 @@
         <img src="{{imgs[1]}}">
       </div>
       <div class="tab__inside-text">
-      <h3>Tab Two</h3>
-      <p>Ne velit labitur vim, sit natum cotidieque cu. Ei consulatu consequuntur mel, sale illum salutatus vix te. Ne tollit vocibus mel. Tamquam recteque maiestatis mei eu. Qui et duis detracto argumentum.</p>
-      <button>button</button>
+      <h3>{{ servicios[1] }}</h3>
+      <form>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Cedula</label>
+          <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Numero de Placa</label>
+          <input type="number" class="form-control" id="exampleInputPassword1">
+        </div>
+        <button data-toggle="modal" data-target="#modalLRForm">Consultar</button>
+      </form>
       </div>
     </div>
    <!---- End tab ---->
@@ -44,10 +62,14 @@
            <img src="{{imgs[2]}}">
             </div>
             <div class="tab__inside-text">
-            <h3>Tab Three</h3>
-            <p>Id dicit torquatos nec. Falli erant necessitatibus ea eam, eu erat viris commodo sit. Qui dicit civibus ad, nam velit graeco neglegentur te, ne nemore legimus vim. No duo augue vocent. Clita intellegebat ex duo, duo te tota quaeque instructior. Et sit tale sint accumsan.
-    </p>
-            <button>button</button>
+            <h3>{{ servicios[2] }}</h3>
+            <form>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Cedula/RUC</label>
+                <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              </div>
+              <button data-toggle="modal" data-target="#modalLRForm">Consultar</button>
+            </form>
             </div>
         </div>
         <!---- End tab ---->
@@ -59,10 +81,18 @@
            <img src="{{imgs[3]}}">
          </div>
          <div class="tab__inside-text">
-         <h3>Tab Four</h3>
-         <p>Lorem ipsum dolor sit amet, sit mundi quidam voluptua et. Et atqui tation nec. An clita semper pri. Vero tractatos consequat sed ex, per mazim nominavi dissentiunt te.
-         </p>
-         <button>button</button>
+         <h3>{{ servicios[3] }}</h3>
+         <form>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Cedula</label>
+            <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Numero Celular</label>
+            <input type="number" class="form-control" id="exampleInputPassword1">
+          </div>
+          <button data-toggle="modal" data-target="#modalLRForm">Consultar</button>
+        </form>
          </div>
      </div>
      <!---- End tab ---->
@@ -71,60 +101,58 @@
      <h3>Seleccione un Servicio</h3>
     </div>
   </div>
-
 </section>
 
 
-  <div class="modal fade" id="modalLRForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog cascading-modal" role="document">
-      <div class="modal-content">
-        <div class="container">
-          <div class="mGrid">
-            <div class="total">
-              <p>total</p>
-              <p>$898</p>
-            </div>
-            <div class="detail">
-              <p>detail</p>
-              <ul>
-                <li>iPad Pro</li>
-                <li>$799</li>
-              </ul>
-              <ul>
-                <li>Apple Pencil</li>
-                <li>$99</li>
-              </ul>
-            </div>
-            <button class="new">pay now</button>
-            <button class="cancel" data-dismiss="modal">Close</button>
+<div class="modal fade" id="modalLRForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog cascading-modal" role="document">
+    <div class="modal-content">
+      <div class="container">
+        <div class="mGrid">
+          <div class="total">
+            <p>total</p>
+            <p>$898</p>
           </div>
-          <!-- Small Side Card detail-->
-          <div class="subContainer">
-            <div class="delantera">
-              <div class="logo-marca" id="logo-marca">
-                <img src="{{ card[1] }}" alt="">
-              </div>
-              <img src="{{ card[0] }}" class="chip" alt="">
-              <div class="datos">
-                <div class="flexbox">
-                  <div class="grupo" id="numero">
-                    <p class="label">Número Tarjeta</p>
-                    <input type="number" class="numero" [(ngModel)]="num2">
-                  </div>
-                  <div class="grupo" id="ccv">
-                    <p class="label">CCV</p>
-                    <input type="number" class="ccv">
-                  </div>
+          <div class="detail">
+            <p>detail</p>
+            <ul>
+              <li>iPad Pro</li>
+              <li>$799</li>
+            </ul>
+            <ul>
+              <li>Apple Pencil</li>
+              <li>$99</li>
+            </ul>
+          </div>
+          <button class="new">pay now</button>
+          <button class="cancel" data-dismiss="modal">Close</button>
+        </div>
+        <!-- Small Side Card detail-->
+        <div class="subContainer">
+          <div class="delantera">
+            <div class="logo-marca" id="logo-marca">
+              <img src="{{ card[1] }}" alt="">
+            </div>
+            <img src="{{ card[0] }}" class="chip" alt="">
+            <div class="datos">
+              <div class="flexbox">
+                <div class="grupo" id="numero">
+                  <p class="label">Número Tarjeta</p>
+                  <input type="number" class="numero" [(ngModel)]="num2">
                 </div>
-                <div class="flexbox">
-                  <div class="grupo" id="nombre">
-                    <p class="label">Nombre Tarjeta</p>
-                    <p class="nombre">Jhon Doe</p>
-                  </div>
-                  <div class="grupo" id="expiracion">
-                    <p class="label">Expiracion</p>
-                    <p class="expiracion"><span class="mes">MM</span> / <span class="year">AA</span></p>
-                  </div>
+                <div class="grupo" id="ccv">
+                  <p class="label">CCV</p>
+                  <input type="number" class="ccv">
+                </div>
+              </div>
+              <div class="flexbox">
+                <div class="grupo" id="nombre">
+                  <p class="label">Nombre Tarjeta</p>
+                  <p class="nombre">Jhon Doe</p>
+                </div>
+                <div class="grupo" id="expiracion">
+                  <p class="label">Expiracion</p>
+                  <p class="expiracion"><span class="mes">MM</span> / <span class="year">AA</span></p>
                 </div>
               </div>
             </div>
@@ -133,4 +161,4 @@
       </div>
     </div>
   </div>
-  
+</div>

@@ -26,6 +26,14 @@ export class ServiciosComponent implements OnInit {
     "assets/img/logos/visa.png",
     "assets/img/logos/mastercard.png"
   ]
+
+  servicios:Array<string> = [
+    "Empresa Electrica Quito",
+    "Agencia Nacional de Transito",
+    "Servicio de Rentas Internas",
+    "Movistar"
+  ]
+
   num2:number
 
   valores:Array<data> = new Array<data>();
