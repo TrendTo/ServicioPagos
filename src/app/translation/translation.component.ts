@@ -15,11 +15,12 @@ export class TranslationComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
   }
 
   public cambiarLenguaje(lang:string){
     this.activeLang=lang
-    this.translate.use(lang)
+    this.translate.use(this.activeLang)
   }
 
 }

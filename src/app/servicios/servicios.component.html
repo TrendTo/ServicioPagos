@@ -1,11 +1,11 @@
 <section class="tab__container">
-    <h1>{{ "servicios" | uppercase }}</h1>
+    <h1>{{ 'second.titulo' | translate | uppercase }}</h1>
     <div [ngSwitch]="tab">
       <div class="tab__title">
-        <button class="tab__button" [ngClass]="{'tab_button-active': tab=='one'}" (click)="cambiarTab('one')"><img src="{{imgs[0]}}">{{ servicios[0] }}</button>
-        <button class="tab__button" [ngClass]="{'tab_button-active': tab=='two'}" (click)="cambiarTab('two')"><img src="{{imgs[1]}}">{{ servicios[1] }}</button>
-        <button class="tab__button" [ngClass]="{'tab_button-active': tab=='three'}" (click)="cambiarTab('three')"><img src="{{imgs[2]}}">{{ servicios[2] }}</button>
-        <button class="tab__button" [ngClass]="{'tab_button-active': tab=='four'}" (click)="cambiarTab('four')"><img src="{{imgs[3]}}">{{ servicios[3] }}</button>
+        <button class="tab__button" [ngClass]="{'tab_button-active': tab=='one'}" (click)="cambiarTab('one')"><img src="{{imgs[0]}}">{{ 'second.serv1' | translate }}</button>
+        <button class="tab__button" [ngClass]="{'tab_button-active': tab=='two'}" (click)="cambiarTab('two')"><img src="{{imgs[1]}}">{{ 'second.serv2' | translate }}</button>
+        <button class="tab__button" [ngClass]="{'tab_button-active': tab=='three'}" (click)="cambiarTab('three')"><img src="{{imgs[2]}}">{{ 'second.serv3' | translate }}</button>
+        <button class="tab__button" [ngClass]="{'tab_button-active': tab=='four'}" (click)="cambiarTab('four')"><img src="{{imgs[3]}}">{{ 'second.serv4' | translate }}</button>
   
       </div>
     <div *ngSwitchCase="'one'">
@@ -15,17 +15,26 @@
             <img src="{{imgs[0]}}">
           </div>
           <div class="tab__inside-text">
-          <h3>{{ servicios[0] }}</h3>
-          <form>
+          <h3>{{ 'second.serv1' | translate }}</h3>
+          <form [formGroup]="formularioCreado">
             <div class="form-group">
               <label for="exampleInputEmail1">Cedula</label>
-              <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <input type="text" class="form-control" aria-describedby="emailHelp" formControlName="cedula" minlength="10" maxlength="13" pattern="[0-9]*">
+              <div *ngIf="formularioCreado.controls['cedula'].invalid && formularioCreado.controls['cedula'].dirty">
+                <p *ngIf="formularioCreado.controls['cedula'].errors.minlength">Debe ingresar 10 digitos para Cedula</p>
+                <p *ngIf="formularioCreado.controls['cedula'].errors.maxlength">Debe ingresar 13 digitos para RUC</p>
+              </div>
             </div>
             <div class="form-group">
-              <label for="exampleInputPassword1">Numero de Planilla</label>
-              <input type="number" class="form-control" id="exampleInputPassword1">
+              <label for="exampleInputPassword1">Cuenta Contrato</label>
+              <input type="text" class="form-control" formControlName="contrato" maxlength="12">
+              <div *ngIf="formularioCreado.controls['contrato'].invalid && formularioCreado.controls['contrato'].dirty">
+                <p *ngIf="formularioCreado.controls['contrato'].errors.minlength">Debe ingresar 12 digitos</p>
+              </div>
             </div>
-            <button data-toggle="modal" data-target="#modalLRForm">Consultar</button>
+            <p>El valor es:{{ formularioCreado.valid }}</p>
+            <button [disabled]="!formularioCreado.valid" data-toggle="modal" data-target="#modalLRForm" (click)="agregar()">Consultar</button>
+            <button (click)="borrar()">Clear</button>
           </form>
           </div>
           
@@ -39,7 +48,7 @@
         <img src="{{imgs[1]}}">
       </div>
       <div class="tab__inside-text">
-      <h3>{{ servicios[1] }}</h3>
+      <h3>{{ 'second.serv2' | translate }}</h3>
       <form>
         <div class="form-group">
           <label for="exampleInputEmail1">Cedula</label>
@@ -62,7 +71,7 @@
            <img src="{{imgs[2]}}">
             </div>
             <div class="tab__inside-text">
-            <h3>{{ servicios[2] }}</h3>
+            <h3>{{ 'second.serv3' | translate }}</h3>
             <form>
               <div class="form-group">
                 <label for="exampleInputEmail1">Cedula/RUC</label>
@@ -81,7 +90,7 @@
            <img src="{{imgs[3]}}">
          </div>
          <div class="tab__inside-text">
-         <h3>{{ servicios[3] }}</h3>
+         <h3>{{ 'second.serv4' | translate }}</h3>
          <form>
           <div class="form-group">
             <label for="exampleInputEmail1">Cedula</label>
@@ -104,59 +113,61 @@
 </section>
 
 
-<div class="modal fade" id="modalLRForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog cascading-modal" role="document">
-    <div class="modal-content">
-      <div class="container">
-        <div class="mGrid">
-          <div class="total">
-            <p>total</p>
-            <p>$898</p>
-          </div>
-          <div class="detail">
-            <p>detail</p>
-            <ul>
-              <li>iPad Pro</li>
-              <li>$799</li>
-            </ul>
-            <ul>
-              <li>Apple Pencil</li>
-              <li>$99</li>
-            </ul>
-          </div>
-          <button class="new">pay now</button>
-          <button class="cancel" data-dismiss="modal">Close</button>
-        </div>
-        <!-- Small Side Card detail-->
-        <div class="subContainer">
-          <div class="delantera">
-            <div class="logo-marca" id="logo-marca">
-              <img src="{{ card[1] }}" alt="">
+<div>
+  <div class="modal fade" id="modalLRForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog cascading-modal" role="document">
+      <div class="modal-content">
+        <div class="container">
+          <div class="mGrid">
+            <div class="total">
+              <p>total</p>
+              <p>$898</p>
             </div>
-            <img src="{{ card[0] }}" class="chip" alt="">
-            <div class="datos">
-              <div class="flexbox">
-                <div class="grupo" id="numero">
-                  <p class="label">Número Tarjeta</p>
-                  <input type="number" class="numero" [(ngModel)]="num2">
+            <div class="detail">
+              <p>detail</p>
+              <ul>
+                <li>iPad Pro</li>
+                <li>$799</li>
+              </ul>
+              <ul>
+                <li>Apple Pencil</li>
+                <li>$99</li>
+              </ul>
+            </div>
+            <button class="new">pay now</button>
+            <button class="cancel" data-dismiss="modal">Close</button>
+          </div>
+          <!-- Small Side Card detail-->
+          <!-- <div class="subContainer">
+            <div class="delantera">
+              <div class="logo-marca" id="logo-marca">
+                <img src="{{ card[1] }}" alt="">
+              </div>
+              <img src="{{ card[0] }}" class="chip" alt="">
+              <div class="datos">
+                <div class="flexbox">
+                  <div class="grupo" id="numero">
+                    <p class="label">Número Tarjeta</p>
+                    <input type="number" class="numero" [(ngModel)]="num2">
+                  </div>
+                  <div class="grupo" id="ccv">
+                    <p class="label">CCV</p>
+                    <input type="number" class="ccv">
+                  </div>
                 </div>
-                <div class="grupo" id="ccv">
-                  <p class="label">CCV</p>
-                  <input type="number" class="ccv">
+                <div class="flexbox">
+                  <div class="grupo" id="nombre">
+                    <p class="label">Nombre Tarjeta</p>
+                    <p class="nombre">Jhon Doe</p>
+                  </div>
+                  <div class="grupo" id="expiracion">
+                    <p class="label">Expiracion</p>
+                    <p class="expiracion"><span class="mes">MM</span> / <span class="year">AA</span></p>
+                  </div>
                 </div>
               </div>
-              <div class="flexbox">
-                <div class="grupo" id="nombre">
-                  <p class="label">Nombre Tarjeta</p>
-                  <p class="nombre">Jhon Doe</p>
-                </div>
-                <div class="grupo" id="expiracion">
-                  <p class="label">Expiracion</p>
-                  <p class="expiracion"><span class="mes">MM</span> / <span class="year">AA</span></p>
-                </div>
-              </div>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>

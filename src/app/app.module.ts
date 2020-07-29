@@ -10,18 +10,26 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TranslationComponent } from './translation/translation.component';
 import { ServiciosComponent } from './servicios/servicios.component';
-import { FormsModule } from '@angular/forms'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
+import { DataService } from './shared/data.service';
+import { PagosComponent } from './page/pagos/pagos.component';
+import { PageComponent } from './page/page.component';
+import { FacturaComponent } from './page/factura/factura.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TranslationComponent,
-    ServiciosComponent
+    ServiciosComponent,
+    PagosComponent,
+    PageComponent,
+    FacturaComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     TranslateModule.forRoot({
       loader: {
@@ -34,7 +42,9 @@ import { FormsModule } from '@angular/forms'
     }),
     FacebookModule.forRoot()
   ],
-  providers: [],
+  providers: [
+    DataService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

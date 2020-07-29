@@ -2,5 +2,12 @@
     "principal" : {
         "texto" : "Obst-Liste",
         "ingresar" : "eingeben"
+    },
+    "second" : {
+        "titulo" : "Dienstleistungen",
+        "serv1" : "Elektrizitätsgesellschaft von Quito",
+        "serv2" : "Nationale Transitagentur",
+        "serv3" : "Bundessteuerbehörde",
+        "serv4" : "Movistar"
     }
 }

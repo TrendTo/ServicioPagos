@@ -2,5 +2,12 @@
     "principal" : {
         "texto" : "Lista de frutas",
         "ingresar" : "ingresar"
+    },
+    "second" : {
+        "titulo" : "Servicios",
+        "serv1" : "Empresa Electrica Quito",
+        "serv2" : "Agencia Nacional de Transito",
+        "serv3" : "Servicio de Rentas Internas",
+        "serv4" : "Movistar"
     }
 }

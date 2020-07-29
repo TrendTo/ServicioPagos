@@ -239,16 +239,16 @@ body {
 }
 .container {
 	position: absolute;
-	width: 600px;
-	height: 400px;
+	width: 550px;
+	height: 650px;
 	background: #FFF;
 	box-shadow: 0px 0px 40px 1px #000;
 	top: 50%;
 	left: 50%;
 	-webkit-transform: translate(0%, 0%);
-	transform: translate(30%, 0%);
+	transform: translate(30%, -5%);
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
+	grid-template-columns: repeat(1, 1fr);
 	-webkit-box-pack: justify;
 	justify-content: space-between;
 	grid-template-areas: "mGrid card";
@@ -260,12 +260,12 @@ body {
 .mGrid {
 	grid-area: mGrid;
 	display: grid;
-	grid-template-rows: repeat(4, 1fr);
+	grid-template-rows: repeat(5, 1fr);
 	overflow: hidden;
 	-webkit-box-pack: center;
 	justify-content: center;
 	margin-top: 0px;
-	margin-left: 30px;
+	margin-left: 0px;
 }
 .total {
 	padding-top: 50px;
