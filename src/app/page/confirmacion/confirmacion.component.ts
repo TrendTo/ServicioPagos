@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-factura',
-  templateUrl: './factura.component.html',
-  styleUrls: ['./factura.component.scss']
+  selector: 'app-confirmacion',
+  templateUrl: './confirmacion.component.html',
+  styleUrls: ['./confirmacion.component.scss']
 })
-export class FacturaComponent implements OnInit {
+export class ConfirmacionComponent implements OnInit {
 
   mesesPagos:Array<number> = [3,6,9,12]
   valor:number =1123123
@@ -16,7 +16,7 @@ export class FacturaComponent implements OnInit {
     "https://firebasestorage.googleapis.com/v0/b/calidad-project.appspot.com/o/parcial2svg%2Fant.svg?alt=media&token=e21693f8-7127-4d15-96e6-0c2fb04e8c74",
     "https://firebasestorage.googleapis.com/v0/b/calidad-project.appspot.com/o/parcial2svg%2Fsri.svg?alt=media&token=896734dd-03ab-45ae-be18-57d7213c80bc",
     "https://firebasestorage.googleapis.com/v0/b/calidad-project.appspot.com/o/parcial2svg%2Fmovistar.svg?alt=media&token=5d5ba933-b82c-421e-a9f9-57762b9bcc50",
-    "https://firebasestorage.googleapis.com/v0/b/calidad-project.appspot.com/o/parcial2svg%2Fdown-arrow.svg?alt=media&token=b5cae785-c40f-49e9-98c9-4e70ac7bb52a"
+    "https://firebasestorage.googleapis.com/v0/b/calidad-project.appspot.com/o/parcial2svg%2Fmoney.svg?alt=media&token=a9f8607f-a336-4b6e-8b95-0ab806f7d2ec"
   ]
 
   constructor() { }

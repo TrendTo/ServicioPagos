@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="pseudo">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="row">
+                <div class="col-sm-3"><img [src]="imglogo" alt=""></div>
+                <div class="col-sm-2"><img class="imgpay" [src]="imgs[4]" alt=""></div>
+                <div class="col-sm-2"><img class="imgpay" [src]="imgs[1]" alt=""></div>
+              </div>
+            </div>
+            <div class="col-sm-4 right">Factura Numero:</div><div class="col-sm-8 left"> {{ valor }}</div>
+            <div class="col-sm-4 right">Fecha:</div><div class="col-sm-8 left">{{ fecha | date: 'dd/MM/yyyy' }}</div>
+            <div class="col-sm-4 right">Cedula/RUC:</div><div class="col-sm-8 left"></div>
+            <div class="col-sm-4 right">Institucion:</div><div class="col-sm-8 left"></div>
+            <div class="col-sm-4 right">Nombre:</div><div class="col-sm-8 left"></div>
+            <div class="col-sm-4 right">Metodo de Pago:</div><div class="col-sm-8 left"></div>
+            <div class="col-sm-4 right">Diferido:</div><div class="col-sm-8 left"></div>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col-sm-12">Detalle</div>
+            <div class="col-sm-6">Total amount</div>
+            <div class="col-sm-6">300</div>
+            <div class="col-sm-6">Total amount</div>
+            <div class="col-sm-6">300</div>
+            <div class="col-sm-6">Total amount</div>
+            <div class="col-sm-6">300</div>
+            <div class="col-sm-6">Total amount</div>
+            <div class="col-sm-6">300</div>
+            <div class="col-sm-6">Discount</div>
+            <div class="col-sm-6">100</div>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col-sm-6">Payable amount</div>
+            <div class="col-sm-6">200</div>
+            <div class="col-sm-12">
+              <button class="btn btn-success">
+                Imprimir
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

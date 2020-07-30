@@ -5,6 +5,7 @@ import { ServiciosComponent } from './servicios/servicios.component';
 import { PagosComponent } from './page/pagos/pagos.component';
 import { FacturaComponent } from './page/factura/factura.component';
 import { PageComponent } from './page/page.component';
+import { ConfirmacionComponent } from './page/confirmacion/confirmacion.component';
 
 
 const routes: Routes = [
@@ -12,6 +13,7 @@ const routes: Routes = [
   {path: 'servicio/:idio', component: ServiciosComponent},
   {path: 'fact', component: FacturaComponent},
   {path: 'page', component: PageComponent},
+  {path: 'modal', component: ConfirmacionComponent},
   {path: '', component: TranslationComponent}
 ];
 

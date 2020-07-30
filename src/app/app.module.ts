@@ -15,6 +15,7 @@ import { DataService } from './shared/data.service';
 import { PagosComponent } from './page/pagos/pagos.component';
 import { PageComponent } from './page/page.component';
 import { FacturaComponent } from './page/factura/factura.component';
+import { ConfirmacionComponent } from './page/confirmacion/confirmacion.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { FacturaComponent } from './page/factura/factura.component';
     ServiciosComponent,
     PagosComponent,
     PageComponent,
-    FacturaComponent
+    FacturaComponent,
+    ConfirmacionComponent
   ],
   imports: [
     BrowserModule,
