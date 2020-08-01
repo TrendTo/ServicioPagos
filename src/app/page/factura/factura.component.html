@@ -3,27 +3,25 @@
     <div class="col-sm-12"><img [src]="imglogo" alt=""></div>
     <div class="col-sm-12"><img [src]="imgs[4]" alt=""></div>
     <div class="col-sm-12"><img class="imgpay" [src]="imgs[1]" alt=""></div>
-    <div class="col-sm-4 right">Cedula/RUC:</div><div class="col-sm-8 left"></div>
-    <div class="col-sm-4 right">Nombre:</div><div class="col-sm-8 left"></div>
+    <div class="col-sm-4 right">{{ 'rotulado.ced' | translate }}:</div><div class="col-sm-8 left"></div>
+    <div class="col-sm-4 right">{{ 'rotulado.nom' | translate }}:</div><div class="col-sm-8 left"></div>
   </div>
   <hr>
   <div class="row">
-    <div class="col-sm-12">Detalle</div>
+    <div class="col-sm-12">{{ 'rotulado.det' | translate }}</div>
     <div class="col-sm-6">Total amount</div>
-    <div class="col-sm-6">300</div>
+    <div class="col-sm-6">{{ 200 | currency}}</div>
     <div class="col-sm-6">Total amount</div>
-    <div class="col-sm-6">300</div>
+    <div class="col-sm-6">{{ 200 | currency}}</div>
     <div class="col-sm-6">Total amount</div>
-    <div class="col-sm-6">300</div>
-    <div class="col-sm-6">Total amount</div>
-    <div class="col-sm-6">300</div>
+    <div class="col-sm-6">{{ 200 | currency}}</div>
     <div class="col-sm-6">Discount</div>
-    <div class="col-sm-6">100</div>
+    <div class="col-sm-6">{{ 200 | currency}}</div>
   </div>
   <hr />
   <div class="row">
-    <div class="col-sm-6">Payable amount</div>
-    <div class="col-sm-6">200</div>
+    <div class="col-sm-6">{{ 'rotulado.pag' | translate }}</div>
+    <div class="col-sm-6">{{ 200 | currency}}</div>
     <div class="col-sm-12">
       <button class="btn btn-success">
         confirm

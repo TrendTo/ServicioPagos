@@ -9,5 +9,16 @@
         "serv2" : "Nationale Transitagentur",
         "serv3" : "Bundessteuerbehörde",
         "serv4" : "Movistar"
+    },
+    "rotulado" : {
+        "ced" : "Steuernr",
+        "nom" : "Name",
+        "det" : "Rechnung",
+        "pag" : "Gesamtsumme"
+    },
+    "card" : {
+        "cn" : "Kartennummer",
+        "tn" : "Namenskarte",
+        "ex" : "Gültig Bis"
     }
 }

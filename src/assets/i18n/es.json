@@ -9,5 +9,16 @@
         "serv2" : "Agencia Nacional de Transito",
         "serv3" : "Servicio de Rentas Internas",
         "serv4" : "Movistar"
+    },
+    "rotulado" : {
+        "ced" : "Cedula/RUC",
+        "nom" : "Nombre",
+        "det" : "Detalle",
+        "pag" : "Total a Pagar"
+    },
+    "card" : {
+        "cn" : "Numero Tarjeta",
+        "tn" : "Nombre Tarjeta",
+        "ex" : "Expiracion"
     }
 }

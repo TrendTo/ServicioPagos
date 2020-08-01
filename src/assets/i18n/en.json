@@ -9,5 +9,16 @@
         "serv2" : "National Transit Agency",
         "serv3" : "Internal Revenue Service",
         "serv4" : "Movistar"
+    },
+    "rotulado" : {
+        "ced" : "Card Id",
+        "nom" : "Name",
+        "det" : "Detail",
+        "pag" : "Total Amount"
+    },
+    "card" : {
+        "cn" : "Card Number",
+        "tn" : "Name Card",
+        "ex" : "Valid Until"
     }
 }
